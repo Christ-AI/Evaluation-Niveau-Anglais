@@ -8,6 +8,29 @@ L’évaluation s’appuie sur une combinaison d’analyses linguistiques (compt
 
 ---
 
+## Données utilisées
+
+Pour entraîner et tester le modèle, j’ai utilisé deux datasets :
+
+- **Dataset des natifs** : collecté à partir d’un site web anglophone (source externe).  
+- **Dataset des non-natifs** : enregistrements réalisés par moi-même et quelques amis, dans le but de constituer un corpus représentatif.
+
+Ces deux jeux de données m’ont permis de comparer les performances du modèle sur des voix natives et non-natives.
+
+---
+
+## Résultats obtenus
+
+Les métriques d’évaluation actuelles sont les suivantes :
+
+- **Précision** : 0.75  
+- **Recall (rappel)** : 0.50  
+- **F1-Score** : 0.30  
+
+Ces résultats indiquent une performance modérée, probablement limitée par la qualité et la taille des données non-natives, qui restent relativement petites et peu diversifiées.
+
+---
+
 ## Fonctionnalités principales
 
 - **Extraction audio → texte** : traitement et transcription des fichiers audio soumis par les participants.  
@@ -16,4 +39,12 @@ L’évaluation s’appuie sur une combinaison d’analyses linguistiques (compt
 - **Classification automatique** : algorithme basé sur des règles et/ou machine learning pour attribuer un niveau de compétence (A1 à C2, regroupés en Débutant, Intermédiaire, Avancé).  
 - **Rapport personnalisé** : pour chaque participant, génération d’un résumé détaillant points forts, axes d’amélioration, et niveau estimé.  
 
+---
 
+## Installation et utilisation
+
+1. **Pré-requis** : Python 3.8+, bibliothèques `pandas`, `numpy`, `speech_recognition`, `scikit-learn`, etc.  
+2. **Cloner ce dépôt** :  
+   ```bash
+   git clone https://github.com/tonpseudo/english-level-evaluation.git
+   cd english-level-evaluation
